@@ -4,6 +4,17 @@ comics:
     image: "comics/comic1.jpg"
     alt_text: "A guy tries to stream a video in the most analog way possible."
     blurb: "I spent way too long thinking about the dumb idea of: what's the absolute most analog way for someone to stream a video?"
+
+ - title: "Multi-Panel Comic"
+    date: "2025-01-01"
+    images: 
+      - path: "comics/comic1-panel1.jpg"
+        alt_text: "First panel description"
+      - path: "comics/comic1-panel2.jpg"
+        alt_text: "Second panel description"
+      - path: "comics/comic1-panel3.jpg"
+        alt_text: "Third panel description"
+    blurb: "A three-panel comic about something funny"
     
   - title: "Beatnik Warden"
     date: "2025-01-03"
