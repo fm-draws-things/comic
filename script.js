@@ -33,6 +33,7 @@ function displayComic(index) {
     document.getElementById('comic-image').src = comic.image;
     document.getElementById('comic-image').alt = comic.alt_text || comic.title;
     document.getElementById('comic-date').textContent = new Date(comic.date).toLocaleDateString();
+    document.getElementById('comic-blurb').textContent = comic.blurb || ''; // Added fallback
     currentIndex = index;
     updateNavButtons();
 }
