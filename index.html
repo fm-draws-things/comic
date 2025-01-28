@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webcomic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="comic-container">
+        <header>
+            <h1>My Webcomic</h1>
+        </header>
+
+        <nav id="comic-nav">
+            <button id="first-btn">First</button>
+            <button id="prev-btn">Previous</button>
+            <button id="archive-btn">Archive</button>
+            <button id="next-btn">Next</button>
+            <button id="latest-btn">Latest</button>
+        </nav>
+
+        <main>
+            <div id="comic-display">
+                <h2 id="comic-title"></h2>
+                <img id="comic-image" src="" alt="">
+                <p id="comic-date"></p>
+            </div>
+        </main>
+
+        <div id="archive-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Archive</h2>
+                <div id="archive-list"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
