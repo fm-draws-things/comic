@@ -36,7 +36,7 @@ header {
 
 button {
     padding: 8px 16px;
-    background: #fff;
+    background: #FFF7E2;
     border: 2px solid #000;
     cursor: pointer;
     font-family: monospace;
@@ -63,7 +63,6 @@ button:disabled {
 #comic-image {
     max-width: 100%;
     height: auto;
-    border: 2px solid #000;
 }
 
 #comic-title {
@@ -87,7 +86,7 @@ button:disabled {
 }
 
 .modal-content {
-    background: #fff;
+    background: #FFF7E2;
     margin: 10% auto;
     padding: 20px;
     border: 2px solid #000;
