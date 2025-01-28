@@ -62,6 +62,7 @@ button:disabled {
     max-width: 100%;
     height: auto;
     border: 2px solid #000;
+    object-fit: cover;
 }
 
 #comic-title {
