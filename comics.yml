@@ -16,3 +16,9 @@ comics:
     image: "comics/comic3.jpg"
     alt_text: "Description of third comic"
     blurb: "this is where the blurb goes, idiot."
+    
+  - title: "May the 4th Be with you"
+    date: "2025-01-05"
+    image: "comics/comic3.jpg"
+    alt_text: "Obv a Star Wars bit"
+    blurb: "this is where the blurb goes, idiot."
