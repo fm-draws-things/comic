@@ -3,6 +3,7 @@ comics:
     date: "2025-01-01"
     image: "comics/comic1.jpg"
     alt_text: "Description of first comic"
+    blurb: "I really hope I see this text."
     
   - title: "Second Comic"
     date: "2025-01-03"
