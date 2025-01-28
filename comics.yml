@@ -1,0 +1,15 @@
+comics:
+  - title: "First Comic"
+    date: "2025-01-01"
+    image: "comics/comic1.jpg"
+    alt_text: "Description of first comic"
+    
+  - title: "Second Comic"
+    date: "2025-01-03"
+    image: "comics/comic2.jpg"
+    alt_text: "Description of second comic"
+    
+  - title: "Third Comic"
+    date: "2025-01-05"
+    image: "comics/comic3.jpg"
+    alt_text: "Description of third comic"
