@@ -29,11 +29,39 @@ async function loadComics() {
 
 function displayComic(index) {
     const comic = comics[index];
+    
+    // Update title and metadata
     document.getElementById('comic-title').textContent = comic.title;
-    document.getElementById('comic-image').src = comic.image;
-    document.getElementById('comic-image').alt = comic.alt_text || comic.title;
     document.getElementById('comic-date').textContent = new Date(comic.date).toLocaleDateString();
-    document.getElementById('comic-blurb').textContent = comic.blurb || ''; // Added fallback
+    document.getElementById('comic-blurb').textContent = comic.blurb || '';
+    
+    // Clear existing images
+    const comicDisplay = document.getElementById('comic-display');
+    const oldImages = comicDisplay.querySelectorAll('.comic-image-container');
+    oldImages.forEach(img => img.remove());
+    
+    // Create container for all images
+    const imagesContainer = document.createElement('div');
+    imagesContainer.className = 'comic-images';
+    
+    // Add each image
+    comic.images.forEach((image, i) => {
+        const imgContainer = document.createElement('div');
+        imgContainer.className = 'comic-image-container';
+        
+        const img = document.createElement('img');
+        img.src = image.path;
+        img.alt = image.alt_text || `Panel ${i + 1}`;
+        img.className = 'comic-image';
+        
+        imgContainer.appendChild(img);
+        imagesContainer.appendChild(imgContainer);
+    });
+    
+    // Insert images after the title
+    const titleElement = document.getElementById('comic-title');
+    titleElement.insertAdjacentElement('afterend', imagesContainer);
+    
     currentIndex = index;
     updateNavButtons();
 }
