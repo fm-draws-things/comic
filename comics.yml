@@ -1,7 +1,7 @@
 comics:
   - title: "A Video"
     date: "2025-01-01"
-    image: "comics/comic1.jpg"
+    image: "comics/video.jpg"
     alt_text: "A guy tries to stream a video in the most analog way possible."
     blurb: "I spent way too long thinking about the dumb idea of: what's the absolute most analog way for someone to stream a video?"
 
