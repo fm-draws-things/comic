@@ -1,17 +1,17 @@
 comics:
   - title: "A Video"
     date: "2025-01-01"
-    image: "comics/comic1.jpg"
+    image: "_comics/comic1.jpg"
     alt_text: "Description of first comic"
     blurb: "I really hope I see this text."
     
   - title: "Second Comic"
     date: "2025-01-03"
-    image: "comics/comic2.jpg"
+    image: "_comics/sleepyTime.jpg"
     alt_text: "Description of second comic"
     
   - title: "Third Comic"
     date: "2025-01-05"
-    image: "comics/comic3.jpg"
+    image: "_comics/beatnikWarden.jpg"
     alt_text: "Description of third comic"
 
