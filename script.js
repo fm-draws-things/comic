@@ -1,69 +1,114 @@
-// Add this at the top of your script.js
 const BASE_PATH = '/comic/';
 
 let comics = [];
 let currentIndex = 0;
 
-// Update the loadComics function to use the base path
 async function loadComics() {
     try {
+        console.log('Starting to load comics...');
         const response = await fetch(BASE_PATH + 'comics.yml');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        console.log('Fetched YAML file, getting text...');
         const text = await response.text();
-        comics = jsyaml.load(text).comics;
+        console.log('YAML content:', text);
+        
+        console.log('Parsing YAML...');
+        const data = jsyaml.load(text);
+        console.log('Parsed data:', data);
+        
+        if (!data || !data.comics) {
+            throw new Error('No comics data found in YAML');
+        }
+        
+        comics = data.comics;
+        console.log('Comics loaded:', comics);
         
         // Add base path to image URLs
-        comics = comics.map(comic => ({
-            ...comic,
-            image: BASE_PATH + comic.image
-        }));
+        comics = comics.map(comic => {
+            return {
+                ...comic,
+                images: Array.isArray(comic.images) 
+                    ? comic.images.map(img => ({
+                        ...img,
+                        path: BASE_PATH + (img.path.startsWith('/') ? img.path.slice(1) : img.path)
+                    }))
+                    : [{ 
+                        path: BASE_PATH + (comic.image.startsWith('/') ? comic.image.slice(1) : comic.image),
+                        alt_text: comic.alt_text
+                    }]
+            };
+        });
+        
+        console.log('Processed comics with paths:', comics);
         
         currentIndex = comics.length - 1;
         displayComic(currentIndex);
         updateNavButtons();
     } catch (error) {
-        console.error('Error loading comics:', error);
+        console.error('Detailed error:', error);
+        console.error('Error stack:', error.stack);
         document.getElementById('comic-display').innerHTML = 
-            '<p>Error loading comics. Check console for details.</p>';
+            `<p>Error loading comics: ${error.message}</p>`;
     }
 }
 
 function displayComic(index) {
-    const comic = comics[index];
-    
-    // Update title and metadata
-    document.getElementById('comic-title').textContent = comic.title;
-    document.getElementById('comic-date').textContent = new Date(comic.date).toLocaleDateString();
-    document.getElementById('comic-blurb').textContent = comic.blurb || '';
-    
-    // Clear existing images
-    const comicDisplay = document.getElementById('comic-display');
-    const oldImages = comicDisplay.querySelectorAll('.comic-image-container');
-    oldImages.forEach(img => img.remove());
-    
-    // Create container for all images
-    const imagesContainer = document.createElement('div');
-    imagesContainer.className = 'comic-images';
-    
-    // Add each image
-    comic.images.forEach((image, i) => {
-        const imgContainer = document.createElement('div');
-        imgContainer.className = 'comic-image-container';
+    try {
+        const comic = comics[index];
+        console.log('Displaying comic:', comic);
         
-        const img = document.createElement('img');
-        img.src = image.path;
-        img.alt = image.alt_text || `Panel ${i + 1}`;
-        img.className = 'comic-image';
+        // Update title and metadata
+        document.getElementById('comic-title').textContent = comic.title;
+        document.getElementById('comic-date').textContent = new Date(comic.date).toLocaleDateString();
+        document.getElementById('comic-blurb').textContent = comic.blurb || '';
         
-        imgContainer.appendChild(img);
-        imagesContainer.appendChild(imgContainer);
-    });
-    
-    // Insert images after the title
-    const titleElement = document.getElementById('comic-title');
-    titleElement.insertAdjacentElement('afterend', imagesContainer);
-    
-    currentIndex = index;
-    updateNavButtons();
+        // Clear existing images
+        const comicDisplay = document.getElementById('comic-display');
+        const oldImages = comicDisplay.querySelectorAll('.comic-image-container');
+        oldImages.forEach(img => img.remove());
+        
+        // Create container for all images
+        const imagesContainer = document.createElement('div');
+        imagesContainer.className = 'comic-images';
+        
+        // Handle both new and old image format
+        const images = comic.images || [{ path: comic.image, alt_text: comic.alt_text }];
+        
+        // Add each image
+        images.forEach((image, i) => {
+            const imgContainer = document.createElement('div');
+            imgContainer.className = 'comic-image-container';
+            
+            const img = document.createElement('img');
+            img.src = image.path;
+            img.alt = image.alt_text || `Panel ${i + 1}`;
+            img.className = 'comic-image';
+            
+            // Add load error handling
+            img.onerror = () => {
+                console.error(`Failed to load image: ${image.path}`);
+                imgContainer.innerHTML = `<p>Failed to load image: ${image.path}</p>`;
+            };
+            
+            imgContainer.appendChild(img);
+            imagesContainer.appendChild(imgContainer);
+        });
+        
+        // Insert images after the title
+        const titleElement = document.getElementById('comic-title');
+        titleElement.insertAdjacentElement('afterend', imagesContainer);
+        
+        currentIndex = index;
+        updateNavButtons();
+    } catch (error) {
+        console.error('Error in displayComic:', error);
+        document.getElementById('comic-display').innerHTML += 
+            `<p>Error displaying comic: ${error.message}</p>`;
+    }
 }
 
 function updateNavButtons() {
