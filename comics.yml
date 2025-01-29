@@ -5,17 +5,6 @@ comics:
     alt_text: "A guy tries to stream a video in the most analog way possible."
     blurb: "I spent way too long thinking about the dumb idea of: what's the absolute most analog way for someone to stream a video?"
 
-  - title: "Multi-Panel Comic"
-    date: "2025-01-01"
-    images: 
-      - path: "comics/comic1-panel1.jpg"
-        alt_text: "First panel description"
-      - path: "comics/comic1-panel2.jpg"
-        alt_text: "Second panel description"
-      - path: "comics/comic1-panel3.jpg"
-        alt_text: "Third panel description"
-    blurb: "A three-panel comic about something funny"
-    
   - title: "Beatnik Warden"
     date: "2025-01-03"
     image: "comics/beatnikWarden.jpg"
@@ -39,3 +28,21 @@ comics:
     image: "comics/sleepyTime.jpg"
     alt_text: "A sleepy bear wakes up."
     blurb: "He has awoken. Sleepytime is over."
+
+  - title: "A Lemonade Stand"
+    date: "2025-01-28"
+    images: 
+      - path: "comics/lemonade1.jpg"
+        alt_text: "A man walking through the desert spots a lemonade stand run by a strange adult character."
+      - path: "comics/lemonade2.jpg"
+        alt_text: "The man talks to the strange lemonade vendor and confirms that he is, in fact, selling lemonade in the middle of nowhere. The stranger says he has run out of lemonade and takes down his open sign."
+      - path: "comics/lemonade3.jpg"
+        alt_text: "The man says that it's strange to see a lemonade stand run by an adult and not a child. The stranger agrees and an evil foreboding tone sets in."
+      - path: "comics/lemonade4.jpg"
+        alt_text: "Using some evil magic, the stranger transforms the man into a lemon."
+      - path: "comics/lemonade5.jpg"
+        alt_text: "The stranger slices the lemon-man in half, juices him into a pitcher, and adds sugar and water."
+      - path: "comics/lemonade6.jpg"
+        alt_text: "The stranger is back to normal, he replaces his open sign and settles happily back into his lemonade stand."
+    blurb: "I started working on this idea as a submission for [CAC's anthology](https://comixaccountability.club/anthology).</br>  Honestly, this is one of my favorite comics I've made recently."
+    
