@@ -44,5 +44,7 @@ comics:
         alt_text: "The stranger slices the lemon-man in half, juices him into a pitcher, and adds sugar and water."
       - path: "comics/lemonade6.jpg"
         alt_text: "The stranger is back to normal, he replaces his open sign and settles happily back into his lemonade stand."
-    blurb: "I started working on this idea as a submission for [CAC's anthology](https://comixaccountability.club/anthology).</br>  Honestly, this is one of my favorite comics I've made recently."
-    
+    blurb:  |
+      Check out our [documentation](https://example.com)
+  
+      This is a new paragraph after a line break
