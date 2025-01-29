@@ -65,6 +65,21 @@ function displayComic(index) {
         document.getElementById('comic-title').textContent = comic.title;
         document.getElementById('comic-date').textContent = new Date(comic.date).toLocaleDateString();
         document.getElementById('comic-blurb').textContent = comic.blurb || '';
+
+        // Handle formatted blurb
+        const blurbElement = document.getElementById('comic-blurb');
+        if (comic.blurb) {
+        // Option 1: Preserve line breaks but treat as plain text
+        blurbElement.style.whiteSpace = 'pre-wrap';
+        blurbElement.textContent = comic.blurb;
+        
+        // Option 2: Parse markdown/HTML (requires a markdown parser library)
+        // blurbElement.innerHTML = marked(comic.blurb); // If using markdown
+        // OR
+        // blurbElement.innerHTML = comic.blurb; // If using HTML
+    } else {
+        blurbElement.textContent = '';
+    }
         
         // Clear existing images
         const comicDisplay = document.getElementById('comic-display');
