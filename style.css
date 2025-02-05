@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+#logo-container img {
+   width: 100%;
+   height: auto;
+}
+
 body {
     font-family: monospace;
     line-height: 1.6;
