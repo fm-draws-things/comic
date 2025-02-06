@@ -52,12 +52,19 @@ header {
 }
 
 .comic-nav button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     padding: 8px 16px;
     background: #fff;
     border: 2px solid #000;
     cursor: pointer;
     font-family: monospace;
     font-size: 1em;
+    min-width: 44px;
+    min-height: 44px;
+    transition: all 0.2s ease;
 }
 
 .comic-nav button:hover {
@@ -68,6 +75,43 @@ header {
 .comic-nav button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    display: none;
+    fill: currentColor;
+}
+
+.btn-text {
+    display: inline;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .comic-nav {
+        gap: 5px;
+    }
+
+    .comic-nav button {
+        padding: 8px;
+    }
+
+    .nav-icon {
+        display: block;
+    }
+
+    .btn-text {
+        display: none;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .comic-nav button {
+        padding: 12px;
+    }
 }
 
 #comic-display {
@@ -93,7 +137,6 @@ header {
 .comic-image {
     max-width: 100%;
     height: auto;
-    /* Removed the border from here */
 }
 
 #comic-title {
@@ -124,7 +167,7 @@ header {
 }
 
 .modal-content {
-    background: #FFF7E2; /* Updated modal background to match main background */
+    background: #FFF7E2;
     margin: 10% auto;
     padding: 20px;
     border: 2px solid #000;
