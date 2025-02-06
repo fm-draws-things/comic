@@ -46,6 +46,15 @@ header {
     flex-wrap: wrap;
 }
 
+#comic-nav-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
 button {
     padding: 8px 16px;
     background: #FFF7E2;
