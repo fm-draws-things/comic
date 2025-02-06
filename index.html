@@ -8,6 +8,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 </head>
 <body>
+    <!-- SVG Sprite Sheet -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="icon-first" viewBox="0 0 24 24">
+            <path d="M8 19V5l8 7-8 7zm9-14h2v14h-2z"/>
+        </symbol>
+        <symbol id="icon-prev" viewBox="0 0 24 24">
+            <path d="M15 19V5l-8 7 8 7z"/>
+        </symbol>
+        <symbol id="icon-archive" viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 5H4V4h16v3zM2 13v7c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-7H2zm10 5H6v-2h6v2z"/>
+        </symbol>
+        <symbol id="icon-next" viewBox="0 0 24 24">
+            <path d="M9 5v14l8-7-8-7z"/>
+        </symbol>
+        <symbol id="icon-latest" viewBox="0 0 24 24">
+            <path d="M7 5v14l8-7-8-7zm7 0h2v14h-2z"/>
+        </symbol>
+    </svg>
+
     <div class="comic-container">
         <header>
             <h1>
@@ -18,11 +37,26 @@
             </h1>
         </header>
         <nav class="comic-nav" id="comic-nav-header">
-            <button id="first-btn-header">First</button>
-            <button id="prev-btn-header">Previous</button>
-            <button id="archive-btn-header">All Comix</button>
-            <button id="next-btn-header">Next</button>
-            <button id="latest-btn-header">Latest</button>
+            <button id="first-btn-header">
+                <svg class="nav-icon"><use href="#icon-first"/></svg>
+                <span class="btn-text">First</span>
+            </button>
+            <button id="prev-btn-header">
+                <svg class="nav-icon"><use href="#icon-prev"/></svg>
+                <span class="btn-text">Previous</span>
+            </button>
+            <button id="archive-btn-header">
+                <svg class="nav-icon"><use href="#icon-archive"/></svg>
+                <span class="btn-text">All Comix</span>
+            </button>
+            <button id="next-btn-header">
+                <svg class="nav-icon"><use href="#icon-next"/></svg>
+                <span class="btn-text">Next</span>
+            </button>
+            <button id="latest-btn-header">
+                <svg class="nav-icon"><use href="#icon-latest"/></svg>
+                <span class="btn-text">Latest</span>
+            </button>
         </nav>
         <main>
             <div id="comic-display">
@@ -32,11 +66,26 @@
                 <p id="comic-blurb"></p>
             </div>
             <nav class="comic-nav" id="comic-nav-footer">
-                <button id="first-btn-footer">First</button>
-                <button id="prev-btn-footer">Previous</button>
-                <button id="archive-btn-footer">All Comix</button>
-                <button id="next-btn-footer">Next</button>
-                <button id="latest-btn-footer">Latest</button>
+                <button id="first-btn-footer">
+                    <svg class="nav-icon"><use href="#icon-first"/></svg>
+                    <span class="btn-text">First</span>
+                </button>
+                <button id="prev-btn-footer">
+                    <svg class="nav-icon"><use href="#icon-prev"/></svg>
+                    <span class="btn-text">Previous</span>
+                </button>
+                <button id="archive-btn-footer">
+                    <svg class="nav-icon"><use href="#icon-archive"/></svg>
+                    <span class="btn-text">All Comix</span>
+                </button>
+                <button id="next-btn-footer">
+                    <svg class="nav-icon"><use href="#icon-next"/></svg>
+                    <span class="btn-text">Next</span>
+                </button>
+                <button id="latest-btn-footer">
+                    <svg class="nav-icon"><use href="#icon-latest"/></svg>
+                    <span class="btn-text">Latest</span>
+                </button>
             </nav>
         </main>
         <div id="archive-modal" class="modal">
