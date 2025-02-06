@@ -239,3 +239,125 @@ header {
 .about-text p {
     margin-bottom: 1em;
 }
+
+/* About Page Styles */
+
+/* Intro Section */
+.intro-section {
+    margin: 40px 0;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #000;
+}
+
+.intro-text {
+    padding: 20px;
+}
+
+.intro-text h2 {
+    margin-bottom: 20px;
+}
+
+/* Greatest Hits Section */
+.greatest-hits {
+    margin: 60px 0;
+}
+
+.hits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.hit-card {
+    border: 2px solid #000;
+    padding: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    background: #fff;
+}
+
+.hit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hit-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.hit-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Social Links Section */
+.social-links {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.social-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    padding: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    fill: currentColor;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-grid {
+        gap: 20px;
+    }
+}
+
+/* Section Headers */
+.about-content section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
