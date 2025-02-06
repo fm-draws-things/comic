@@ -10,13 +10,13 @@ comics:
     image: "comics/beatnikWarden.jpg"
     alt_text: "Some prisoners on a chain gang are told to \"dig\" by a beatnik warden."
     blurb: ""
-    
+
   - title: "Thinker"
     date: "2025-01-05"
     image: "comics/thinker.jpg"
     alt_text: "The famous sculpture \"The Thinker\" is thinking."
     blurb: "Always be thinking."
-        
+
   - title: "Beanie Babies"
     date: "2025-01-05"
     image: "comics/beanieBabies.jpg"
@@ -39,7 +39,7 @@ comics:
     date: "2025-01-05"
     image: "comics/thiccBacon.png"
     alt_text: "A slab of bacon with a big butt."
-    blurb: "Thiccccc
+    blurb: "Thiccccc"
 
   - title: "You Got Time To Lean..."
     date: "2025-01-05"
