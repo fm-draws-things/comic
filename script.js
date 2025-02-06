@@ -1,4 +1,4 @@
-const BASE_PATH = '/comic/';
+const BASE_PATH = '/';
 
 let comics = [];
 let currentIndex = 0;
