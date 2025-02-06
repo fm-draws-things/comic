@@ -38,6 +38,29 @@ header {
     border: 0;
 }
 
+/* Site Navigation */
+.site-nav {
+    margin-top: 20px;
+}
+
+.site-nav-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #fff;
+    border: 2px solid #000;
+    color: #000;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 1em;
+    transition: all 0.2s ease;
+}
+
+.site-nav-link:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Comic Navigation */
 .comic-nav {
     display: flex;
     justify-content: center;
@@ -88,32 +111,7 @@ header {
     display: inline;
 }
 
-/* Responsive styles */
-@media (max-width: 600px) {
-    .comic-nav {
-        gap: 5px;
-    }
-
-    .comic-nav button {
-        padding: 8px;
-    }
-
-    .nav-icon {
-        display: block;
-    }
-
-    .btn-text {
-        display: none;
-    }
-}
-
-/* Touch device optimizations */
-@media (hover: none) {
-    .comic-nav button {
-        padding: 12px;
-    }
-}
-
+/* Comic Display */
 #comic-display {
     display: flex;
     flex-direction: column;
@@ -155,7 +153,7 @@ header {
     padding: 0 20px;
 }
 
-/* Modal styles */
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -198,49 +196,12 @@ header {
     background: #fff;
 }
 
-
-.site-nav {
-    margin-top: 20px;
-}
-
-.site-nav-link {
-    display: inline-block;
-    padding: 8px 16px;
-    background: #fff;
-    border: 2px solid #000;
-    color: #000;
-    text-decoration: none;
-    font-family: monospace;
-    font-size: 1em;
-    transition: all 0.2s ease;
-}
-
-.site-nav-link:hover {
-    background: #000;
-    color: #fff;
-}
-
-/* About page specific styles */
+/* About Page Styles */
 .about-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
-
-.about-content h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.about-text {
-    line-height: 1.6;
-}
-
-.about-text p {
-    margin-bottom: 1em;
-}
-
-/* About Page Styles */
 
 /* Intro Section */
 .intro-section {
@@ -257,7 +218,6 @@ header {
 .intro-image img {
     width: 100%;
     height: auto;
-    border: 2px solid #000;
 }
 
 .intro-text {
@@ -270,23 +230,26 @@ header {
 
 /* Greatest Hits Section */
 .greatest-hits {
-    margin: 60px 0;
+    margin: 60px auto;
+    max-width: 600px;
+    padding: 0 20px;
 }
 
 .hits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 30px;
     margin-top: 30px;
 }
 
 .hit-card {
     border: 2px solid #000;
-    padding: 15px;
+    padding: 20px;
     text-decoration: none;
     color: inherit;
     transition: all 0.2s ease;
     background: #fff;
+    text-align: center;
 }
 
 .hit-card:hover {
@@ -294,14 +257,13 @@ header {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.hit-card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-}
-
 .hit-card h3 {
     margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.hit-card p {
+    line-height: 1.4;
 }
 
 /* Social Links Section */
@@ -340,24 +302,45 @@ header {
     color: #000;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .intro-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hits-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .social-grid {
-        gap: 20px;
-    }
-}
-
 /* Section Headers */
 .about-content section h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.8em;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .comic-nav {
+        gap: 5px;
+    }
+
+    .comic-nav button {
+        padding: 8px;
+    }
+
+    .nav-icon {
+        display: block;
+    }
+
+    .btn-text {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-grid {
+        gap: 20px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .comic-nav button {
+        padding: 12px;
+    }
 }
