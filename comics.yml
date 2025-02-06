@@ -29,6 +29,30 @@ comics:
     alt_text: "A sleepy bear wakes up."
     blurb: "He has awoken. Sleepytime is over."
 
+  - title: "Why Waldo"
+    date: "2025-01-05"
+    image: "comics/whyWaldo.png"
+    alt_text: "Waldo has an existential crisis."
+    blurb: "Don't even get me started on *when* Waldo."
+
+  - title: "Thicc Bacon"
+    date: "2025-01-05"
+    image: "comics/thiccBacon.png"
+    alt_text: "A slab of bacon with a big butt."
+    blurb: "Thiccccc
+
+  - title: "You Got Time To Lean..."
+    date: "2025-01-05"
+    image: "comics/timeToLean.png"
+    alt_text: "A man yelling at the Leaning Tower of Pisa."
+    blurb: "This mess won't clean itself up, Tower, c'mon."
+
+  - title: "D.J. Salinger"
+    date: "2025-01-05"
+    image: "comics/djSalinger.png"
+    alt_text: "J.D. Salinger dressed as a 2010s-era DJ making puns based on his writing."
+    blurb: "Honestly I've been workshopping this joke for a decade. It's time to move on."
+
   - title: "A Lemonade Stand"
     date: "2025-01-28"
     images: 
