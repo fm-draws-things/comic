@@ -11,6 +11,7 @@ body {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #FFF7E2;
 }
 
 .comic-container {
@@ -92,7 +93,7 @@ header {
 .comic-image {
     max-width: 100%;
     height: auto;
-    border: 2px solid #000;
+    /* Removed the border from here */
 }
 
 #comic-title {
@@ -123,7 +124,7 @@ header {
 }
 
 .modal-content {
-    background: #fff;
+    background: #FFF7E2; /* Updated modal background to match main background */
     margin: 10% auto;
     padding: 20px;
     border: 2px solid #000;
@@ -151,5 +152,5 @@ header {
 }
 
 .archive-entry:hover {
-    background: #f0f0f0;
+    background: #fff;
 }
