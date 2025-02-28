@@ -76,9 +76,9 @@ comics:
   - title: "Burnin' Love"
     date: "2025-02-28"
     images: 
-      - path: "comics/presley1.jpg"
+      - path: "comics/presley01.jpg"
         alt_text: "A witch is about to be burned at the stake."
-      - path: "comics/presley2.jpg"
+      - path: "comics/presley02.jpg"
         alt_text: "The witch starts reciting lyrics to an Elvis Song called burning love."
     blurb: |
       Elvis was 100% related to witches. Change my mind.
