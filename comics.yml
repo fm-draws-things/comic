@@ -72,7 +72,6 @@ comics:
       This comic originally began as a 2-color riso design for [a CAC Anthology submission](https://comixaccountability.club/anthology). 
       Here it is in glorious *technicolor*.
 
-
   - title: "Burnin' Love"
     date: "2025-02-28"
     images: 
@@ -82,3 +81,15 @@ comics:
         alt_text: "The witch starts reciting lyrics to an Elvis Song called burning love."
     blurb: |
       Elvis was 100% related to witches. Change my mind.
+
+  - title: "Fingers"
+    date: "2025-03-01"
+    image: "comics/fingers.jpg"
+    alt_text: "A man with a lot of fingers talks about how he played in chemical waste...and has knuckle tats."
+    blurb: "Love a knuckle tats with too many fingers riff. Truly timeless."
+
+  - title: "Oscar"
+    date: "2025-03-01"
+    image: "comics/oscar.jpg"
+    alt_text: "An Oscars statue running around telling people his favorite movie."
+    blurb: "But truly, Forrest Gump deserved the win more."
